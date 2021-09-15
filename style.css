@@ -46,11 +46,22 @@ p {
     box-sizing: border-box;
 }
 
+.kontenerikon {
+    display: flex;
+    height: 10px;
+    margin-bottom: 0;
+}
+
+.szinboxikon{
+    flex-grow: 1;
+    border: 1px solid black;
+}
+
+
 .kontener {
     display: flex;
-    height: 4px;
+    height: 10px;
     margin-top: 0;
-
 }
 
 .szinbox{
@@ -73,11 +84,17 @@ p {
 
 
 
+.ikon {
+    background-color: #c3e7fd;
+    width: 38px;
+}
 
-
-
-
-
+.torl {
+    width: 54px;
+    height: 31px;
+    font-size: 15px;
+    background-color: #dab1a2;
+}
 
 
 
@@ -89,24 +106,11 @@ p {
 }
 
 
-.torl {
-    width: 70px;
-    background-color: #dab1a2;
-    line-height: 2;
-}
-
 .szin {
     border-left: 1px solid black;
     line-height: 2;
 }
 
-.rend, .megn, .jegy, .ikon {
-    line-height: 2;
-}
-
-.ikon {
-    background-color: #c3e7fd;
-}
 
 ul {
     list-style: none;
@@ -123,7 +127,9 @@ li {
 }
 
 
-
+/*
+T: minta
+Ezt ne töröljük ki, maradjon meg mintának.
 .minta {
     width: 50px;
     height: 50px;
@@ -137,11 +143,19 @@ li {
     margin: 0 auto;
     text-align: center;
     border: 2px solid black;
-
 }
+*/
+
+
 
 @media (min-width: 500px) {
     section {
         width: 500px;
+    }
+}
+
+@media (min-width: 980px) {
+    section {
+        width: 980px;
     }
 }

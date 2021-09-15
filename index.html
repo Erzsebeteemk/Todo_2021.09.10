@@ -23,7 +23,11 @@
 <h3><span> színesen</span>, bővíthetően, törölhetően </h3>
 <p>Listaelemekre kattintással tud színezni.</p>
 
+
 <div id="bevitel">
+
+<div class="kontenerikon"> 
+</div>
 
 <input id="inputMezo"   type="text"  value=""  maxlength="28" >
 
@@ -31,7 +35,7 @@
 </div>
 
 <div id="haromgomb">
-    <button class="gombok" id="listába"> Listába </button>
+    <button class="gombok" id="fogomb"> Listába </button>
     <button class="gombok" id="betuszin"> betűszín</button>
     <button class="gombok" id="ujelem"> Új elem </button>
 </div>
@@ -42,20 +46,26 @@
 <ul>
     <li class="sor" id="sor1" data-szamozo="1" value=By milk>
             By milk
-            <button class="ikon">  <i class="fas fa-space-shuttle"></i>   </button>
+            <button class="ikon" data-szamozo="1">  <i class="fas fa-space-shuttle"></i>   </button>
             <button class="torl" id="torl1"  data-szamozo="1" >   Törlés  </button>
-            <button class="jegy" id="jegy1"  data-szamozo="1" >   J       </button>
-            <button class="megn" id="megn1"  data-szamozo="1" >   M       </button>
-            <button class="rend" id="rend1"  data-szamozo="1" >   S       </button>
-            <button class="szin" id="szin1"  data-szamozo="1" >   Sz      </button>
+                                                                    <!--  
+                                                                    <button class="jegy" id="jegy1"  data-szamozo="1" >   J       </button>
+                                                                    <button class="megn" id="megn1"  data-szamozo="1" >   M       </button>
+                                                                    <button class="rend" id="rend1"  data-szamozo="1" >   S       </button>
+                                                                    <button class="szin" id="szin1"  data-szamozo="1" >   Sz      </button>
+                                                                    -->
     </li> 
 </ul>
 
 </section>
 
 
+<!-- 
+T: minta     
+Ezt ne töröljük ki, maradjon meg mintának.
 <div class="minta"></div>
 <span class="belso">inline elem</span>
+-->
 
 <script src="icons.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

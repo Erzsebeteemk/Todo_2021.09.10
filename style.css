@@ -159,3 +159,14 @@ Ezt ne töröljük ki, maradjon meg mintának.
         width: 980px;
     }
 }
+
+.lathato {
+    position: fixed;
+    top: 100px;
+    height: 500px;
+    background-color: rgba(200,200,200,0.5);
+}
+
+.rejtett {
+    display: none;
+}

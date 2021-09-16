@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todos</title>
+    <title>Todos kis telefon nezet</title>
     <script src="https://kit.fontawesome.com/bc8a046247.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,32 +12,34 @@
 
 <body>
 
-<button id="veletlenhatter" > háttér?
-
-</button>
-
 
 <section>
 
-<h1>Todos listám</h1>
-<h3><span> színesen</span>, bővíthetően, törölhetően </h3>
-<p>Listaelemekre kattintással tud színezni.</p>
+    <div class="kontenerikon"> 
+    </div>
+      
 
+<h1>Todos színesen</h1>
+<h3>háttér, szöveg, betűszín </h3>
+<p>Katt a gombra, random háttér. <br> Katt a listára, 7 téglalap-szín. Katt a repülőre, 7 betűszín. </p>
 
 <div id="bevitel">
 
-<div class="kontenerikon"> 
+<div class="kontener"> 
 </div>
 
-<input id="inputMezo"   type="text"  value=""  maxlength="28" >
+<input id="inputMezo"   type="text"  value=""  maxlength="12" >
 
-<div class="kontener"> 
+<div id="csik"> 
 </div>
 
 <div id="haromgomb">
     <button class="gombok" id="fogomb"> Listába </button>
     <button class="gombok" id="ujelem"> Új elem </button>
+    <button class="gombok" id="veletlenhatter"> háttér?        </button>
+    <!--  
     <button class="gombok" id="betuszin"> betűszín</button>
+    -->
 </div>
 
 </div>
@@ -59,27 +61,25 @@
 </ul>
 
 
-
+<!--  Törlés megerősítéséhez talán használjuk.
 <div class="rejtett lathato">
     <form action="">
         <button id="tenylegtorlom"> Tényleg törlöm. </button>
         <button id="megsem"> Mégsem. </button>
     </form>
 </div>
-
+-->
 
 
 </section>
 
 
 <!-- 
-T: minta     
+T: minta: block és inline elem szemléltetés    
 Ezt ne töröljük ki, maradjon meg mintának.
 <div class="minta"></div>
 <span class="belso">inline elem</span>
 -->
-
-
 
 
 
@@ -91,6 +91,3 @@ Ezt ne töröljük ki, maradjon meg mintának.
 </body>
 
 </html>
-
-
-

@@ -32,6 +32,50 @@ $("ul").on("click",".torl",(event) => {
 
 
 
+
+// T: Újabb li-t tesz be a listába. A: fögombra kattintva a képernyőn, és B: Enter billentyűre kattintva a billentyűzeten.
+// A. (Enterre kattintás(W3school keyboardEvent key)) és B. (főgombra kattintás=Listába feliratú gomb) 
+//ugyanazt a függvényt használja
+//(függvény: listába teszi az inputmező tartalmát) Működik.
+let hanyadiksor = 1
+let szoveg = null
+
+let listabateszi = () => {
+    szoveg      = $("#inputMezo").val()
+    hanyadiksor = parseInt(hanyadiksor)+1
+
+    $("ul").append(` <li   class="sor"  id="sor${hanyadiksor}"   data-szamozo="${hanyadiksor}">
+                        ${szoveg}
+                        <button class="ikon" id="ikon${hanyadiksor}" data-szamozo="${hanyadiksor}" >  <i class="fas fa-space-shuttle"></i>   </button>
+                        <button class="torl" id="torl${hanyadiksor}"  data-szamozo="${hanyadiksor}" >   Törlés      </button>
+
+                        <button class="rejt tenylproba" id="teny${hanyadiksor}" data-szamozo="${hanyadiksor}" >Töröl?</button>
+                        <button class="rejt megsproba" id="megs${hanyadiksor}" data-szamozo="${hanyadiksor}" >Mégsem</button>
+                    </li> 
+    `)
+}
+
+            //A. Enter-t nyomtam-e meg? Vagyis a billentyűlenyomás esemény függvény eseménybillentyűje Enter volt-e.
+            //(HTML input tulajdonsághoz is kapcsolódik:    onkeydown="billty(event)") 
+function billty (event) {
+    var x = event.key
+    if  (x == "Enter") {
+            //Ha igen, akkor jöhet a listabateszi függvény.
+        listabateszi ()
+    }
+}
+
+            //B. főgomb-ra kattintva jöhet a listabateszi függvény,
+$("#fogomb").click (()  => {
+        listabateszi ()
+}
+)  
+
+
+
+
+/* 2021.09.24.23:01  Ez csak az A változat (főgombra kattintva tesz listába elemet.)
+Ehelyett most beteszek A (főgomb) + B (billty Enter) egy komplett változatot. 2021.09.24.23:01.
 // T: Főgombra kattintva mindig újabb li-t tesz az ul-be, az input mezőből (input, val, li, ul)
 let hanyadiksor = 1
 let szoveg = null
@@ -48,11 +92,12 @@ $("#fogomb").click (()  => {
 
                                 <button class="rejt tenylproba" id="teny${hanyadiksor}" data-szamozo="${hanyadiksor}" >Töröl?</button>
                                 <button class="rejt megsproba" id="megs${hanyadiksor}" data-szamozo="${hanyadiksor}" >Mégsem</button>
-
-                             </li> 
+                            </li> 
             `)
 }
 )
+*/
+
                                 /*
                                 <button class="jegy" id="jegy${hanyadiksor}"  data-szamozo="${hanyadiksor}" >   J     </button>
                                 <button class="megn" id="megn${hanyadiksor}"  data-szamozo="${hanyadiksor}" >   M  </button>

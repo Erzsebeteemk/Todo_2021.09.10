@@ -1,4 +1,37 @@
 
+// T: Ha a törlés gombra kattintunk, akkor felhoz 2 gombot (Töröl?, Mégsem), hogy tényleg törölni akarjuk-e,
+//bármennyi sornál.
+let mittorol = null
+let toroltorol = null
+let vissza = null
+
+$("ul").on("click",".torl",(event) => {
+    mittorol = $(event.currentTarget).attr("data-szamozo")
+    $("#torl"+mittorol).toggleClass("rejt")
+    $("#ikon"+mittorol).toggleClass("rejt")
+    $("#teny"+mittorol).toggleClass("rejt")
+    $("#megs"+mittorol).toggleClass("rejt")
+}
+)
+
+
+    $("ul").on("click", ".tenylproba",(event) => {
+    toroltorol = $(event.currentTarget).attr("data-szamozo")
+    $("#sor"+toroltorol).remove()
+    }
+    )
+    
+    $("ul").on("click", ".megsproba",(event) => {
+    vissza = $(event.currentTarget).attr("data-szamozo") 
+    $("#torl"+vissza).toggleClass("rejt")
+    $("#ikon"+vissza).toggleClass("rejt")
+    $("#teny"+vissza).toggleClass("rejt")
+    $("#megs"+vissza).toggleClass("rejt")
+    }
+    )
+
+
+
 // T: Főgombra kattintva mindig újabb li-t tesz az ul-be, az input mezőből (input, val, li, ul)
 let hanyadiksor = 1
 let szoveg = null
@@ -10,8 +43,12 @@ $("#fogomb").click (()  => {
 
             $("ul").append(` <li   class="sor"  id="sor${hanyadiksor}"   data-szamozo="${hanyadiksor}">
                                 ${szoveg}
-                                <button class="ikon"  data-szamozo="${hanyadiksor}" >  <i class="fas fa-space-shuttle"></i>   </button>
+                                <button class="ikon" id="ikon${hanyadiksor}" data-szamozo="${hanyadiksor}" >  <i class="fas fa-space-shuttle"></i>   </button>
                                 <button class="torl" id="torl${hanyadiksor}"  data-szamozo="${hanyadiksor}" >   Törlés      </button>
+
+                                <button class="rejt tenylproba" id="teny${hanyadiksor}" data-szamozo="${hanyadiksor}" >Töröl?</button>
+                                <button class="rejt megsproba" id="megs${hanyadiksor}" data-szamozo="${hanyadiksor}" >Mégsem</button>
+
                              </li> 
             `)
 }
@@ -42,17 +79,6 @@ else if (`${most}` !== "rgb(0, 0, 0)")   {
 }
 )
 */
-
-
-
-// T: Törlés gombra kattintva az adott sort mindenestől kitörli.
-let mittorol = null
-
-$("ul").on("click", ".torl", (event) => {
-    mittorol = $(event.currentTarget).attr("data-szamozo")
-    $("#sor"+mittorol).remove()
-}
-)
 
 
 

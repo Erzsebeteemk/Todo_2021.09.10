@@ -1,3 +1,37 @@
+
+.tenylproba {
+    background-color: yellow;
+    width: 58px;
+    height: 30px;
+    font-size: 15px;
+    padding: 1px 3px;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 2px solid black;
+    margin-right: 11px;
+    border-radius: 18%;
+    float: right;
+}
+
+.megsproba {
+    background-color: chartreuse;
+    height: 30px;
+    font-size: 10px;
+    padding: 1px 2px;
+    border-left: 2px solid black;
+    border-top: 0;
+    border-bottom: 0;
+    border-radius: 18%;
+    float: right;
+}
+
+
+.rejt {
+    display: none;
+}
+
+
+
 body {
     margin: 0 auto 0 auto;
     background-color: #fcc11e;
@@ -52,7 +86,7 @@ p {
 
 .kontenerikon {
     display: flex;
-    height: 10px;
+    height: 8px;
     margin-bottom: 0;
 }
 
@@ -64,7 +98,7 @@ p {
 
 .kontener {
     display: flex;
-    height: 10px;
+    height: 8px;
     margin-top: 0;
 }
 
@@ -87,6 +121,7 @@ p {
     border-radius: 18%;
     background-color: rgb(0, 255, 255);
     height: 42px;
+    width: 90px;
 }
 
 
@@ -95,7 +130,7 @@ p {
     background-color: #c3e7fd;
     width: 38px;
     margin-right: 11px;
-
+    border-radius: 18%;
 }
 
 .torl {
@@ -103,6 +138,7 @@ p {
     height: 31px;
     font-size: 15px;
     background-color: #dab1a2;
+    border-radius: 18%;
 }
 
 .szin, .rend, .megn, .jegy, .torl, .ikon {
@@ -150,7 +186,8 @@ Ezt ne töröljük ki, maradjon meg mintának.
 }
 */
 
-
+/* Ezt akkor használnánk, ha 1 ablak lenne a törlés jóváhagyására az oldalon,
+vagyis nem soronként lehetne törölni.
 .lathato {
     position: fixed;
     top: 100px;
@@ -161,6 +198,8 @@ Ezt ne töröljük ki, maradjon meg mintának.
 .rejtett {
     display: none;
 }
+*/
+
 
 
 /* ez kerül mindig a végére! */

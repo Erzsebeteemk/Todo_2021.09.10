@@ -1,4 +1,78 @@
 
+// // T: Ha a Teljesen megújul a lista? gombra kattintunk, akkor felhoz 2 gombot (Megújulás, Mégsem), hogy tényleg törölni akarjuk-e,
+// //Ha igen, akkor a teljes listát kitörli.
+
+
+$("#teljuj").click(() => {
+    $("#teljuj").toggleClass("rakattintva")
+    $("#megsteljuj").toggleClass("rejt")
+    $("#tenyteljuj").toggleClass("rejt")
+}
+)
+
+    $("#tenyteljuj").on("click",() => {
+    $(".sor").remove()
+    $("#megsteljuj").toggleClass("rejt")
+    $("#tenyteljuj").toggleClass("rejt")
+    $("#teljuj").toggleClass("rakattintva")
+    }
+    )
+    
+    $("#megsteljuj").on("click",() => {
+        $("#megsteljuj").toggleClass("rejt")
+        $("#tenyteljuj").toggleClass("rejt")
+        $("#teljuj").toggleClass("rakattintva")
+    }
+    )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // T: Ha a törlés gombra kattintunk, akkor felhoz 2 gombot (Töröl?, Mégsem), hogy tényleg törölni akarjuk-e,
 //bármennyi sornál.
 let mittorol = null

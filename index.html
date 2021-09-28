@@ -19,10 +19,8 @@
       
 
     <h1>Todos színesen</h1>
-    <h3>háttér, listasor, betűszín </h3>
-    <p>Random háttérhez katt a Háttér gombra. <br> 
-        Listasor színekhez katt a listára. Betűszínekhez katt az űrsiklóra. <br> 
-        Mobil nézet, akár kis felbontásra is (320x568). 8 karakteres hasznos játék. Jó szórakozást!
+    <h3>háttér, sorok, szöveg </h3>
+    <p>színét kedved szerint módosítanád? Katt a háttér gombra, katt a sorokra, katt az űrsiklóra. Mobil nézet, akár kis felbontásra is (320x568). 10 karakteres hasznos játék. Jó szórakozást!
     </p>
 
 
@@ -30,13 +28,13 @@
 
         <div class="kontener"> </div>
 
-        <input id="inputMezo"   type="text"  value=""  maxlength="8" onkeydown="billty(event)">
+        <input id="inputMezo"   type="text"  value=""  maxlength="10" onkeydown="billty(event)">
 
         <div id="csik"> </div>
 
         <div id="haromgomb">
             <button class="gombok" id="fogomb"> Listába </button>
-            <button class="gombok" id="ujelem"> Új </button>
+            <button class="gombok" id="ujelem"> Új</button>
             <button class="gombok" id="veletlenhatter"> Háttér </button>
             <!--  
             <button class="gombok" id="betuszin"> betűszín</button>
@@ -64,6 +62,10 @@
             -->
         </li> 
     </ul>
+
+    <button class="" id="teljuj"> Teljesen megújul a lista?</button>
+    <button class="rejt telj" id="megsteljuj"> Mégsem </button>
+    <button class="rejt telj" id="tenyteljuj"> Megújulás </button>
 
 
 </section>

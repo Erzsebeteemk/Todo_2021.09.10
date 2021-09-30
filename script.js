@@ -1,7 +1,6 @@
 
-// // T: Ha a Teljesen megújul a lista? gombra kattintunk, akkor felhoz 2 gombot (Megújulás, Mégsem), hogy tényleg törölni akarjuk-e,
-// //Ha igen, akkor a teljes listát kitörli.
-
+// T: Teljes lista törlése, legalul, jóváhagyással, +2 gombbal.
+//Ezt a részt lehet függvénnyel tömöríteni.
 
 $("#teljuj").click(() => {
     $("#teljuj").toggleClass("rakattintva")
@@ -27,54 +26,7 @@ $("#teljuj").click(() => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// T: Ha a törlés gombra kattintunk, akkor felhoz 2 gombot (Töröl?, Mégsem), hogy tényleg törölni akarjuk-e,
-//bármennyi sornál.
+// T: Soronkénti törlés jóváhagyással, +2 gombbal (Töröl?, Mégsem), bármennyi sornál. //
 let mittorol = null
 let toroltorol = null
 let vissza = null
@@ -147,7 +99,6 @@ $("#fogomb").click (()  => {
 
 
 
-
 /* 2021.09.24.23:01  Ez csak az A változat (főgombra kattintva tesz listába elemet.)
 Ehelyett most beteszek A (főgomb) + B (billty Enter) egy komplett változatot. 2021.09.24.23:01.
 // T: Főgombra kattintva mindig újabb li-t tesz az ul-be, az input mezőből (input, val, li, ul)
@@ -197,33 +148,6 @@ else if (`${most}` !== "rgb(0, 0, 0)")   {
     $(event.target).css("color", "rgb(0, 0, 0)")  }
 }
 )
-*/
-
-
-
-/*
-//..............................................................................................................
-// T: Törlés gombra kattintva az adott sort mindenestől kitörli. Egy külön megerősító ablak nyílt volna fel.Ez csak próbálkozás.
-// data-aszamozo értékét hogy viszi tovább? Most mindent kitöröl.
-let megerositetttorles = (mittorol) => {
-    $("#tenylegtorlom").click(() => {
-            $("#sor"+mittorol).remove()
-            $(".lathato").toggleClass("rejtett")
-    }
-    )
-}
-
-let mittorol = null
-
-$("ul").on("click", ".torl", (event) => {
-    mittorol = $(event.currentTarget).attr("data-szamozo")
-                                    console.log(mittorol)   //  pl. a 4-dikre kattintok
-    $(".lathato").toggleClass("rejtett")
-                                    megerositetttorles("mittorol")
-}
-)
-                                    console.log(mittorol)  
-//.......................................................................................................................
 */
 
 
@@ -277,7 +201,7 @@ szinekikon.forEach(function (szinikon) {
 
 
 
-// T: Ikonra kattintva a listaelem betűszíne változik meg (input feletti színsáv szerint).
+// T: Ikonra kattintva a listaelem betűszíne változik meg (legfelül van a színsáv).
 kattikon = 0
 let mitszinezikon = null
 
@@ -307,7 +231,7 @@ $("ul").on("click",".ikon",(event) => {
 
 
 
-// T: Színminta az inputmező alatt.
+// T: Színminta az inputmező felett, listasorok színe.
 let szinek = ["rgb(54, 105, 173)", "rgb(255, 204, 0)", "rgb(255, 119, 0)", "rgb(212, 230, 135)", "#c5dae4", "#fbebfe", "rgb(255, 255, 255)"] 
 
 szinek.forEach(function (szin) {
@@ -319,7 +243,13 @@ szinek.forEach(function (szin) {
 
 
 
-/* Ez a kettő ugyanaz: Függvény definiálás      =>   ill.  function  -nal
+/* Ez a 3 ugyanaz: Függvény definiálás      =>   ill.  function  -nal
+$("#ujelem").on("click", () => {
+............................
+}
+)
+
+
 $("#ujelem").click( () => {
 ............................
 }
@@ -341,7 +271,7 @@ $("#ujelem").click( () => {
 
 
 
-// T: Véletlenszerűen megváltoztatja a színét az oldalnak, ha egy gomboot (#veletlenhatter) megnyomok. JQuery-val.
+// T: Véletlenszerűen megváltoztatja a színét az oldalnak, ha egy gomboot (#veletlenhatter) megnyomok. JQuery-vel.
 function veletlen(number) {
     return Math.floor(Math.random() * (number+1)  )
 }

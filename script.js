@@ -71,7 +71,7 @@ let listabateszi = () => {
     hanyadiksor = parseInt(hanyadiksor)+1
 
     $("ul").append(` <li   class="sor"  id="sor${hanyadiksor}"   data-szamozo="${hanyadiksor}">
-                        ${szoveg}
+                        <div class="szoveg">${szoveg}</div>
                         <button class="ikon" id="ikon${hanyadiksor}" data-szamozo="${hanyadiksor}" >  <i class="fas fa-space-shuttle"></i>   </button>
                         <button class="torl" id="torl${hanyadiksor}"  data-szamozo="${hanyadiksor}" >   Törlés      </button>
 

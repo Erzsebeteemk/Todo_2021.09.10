@@ -70,8 +70,9 @@ let listabateszi = () => {
     szoveg      = $("#inputMezo").val()
     hanyadiksor = parseInt(hanyadiksor)+1
 
+                            // D, 2021.10.09-én:  A szöveg-nek div-et adott. ( Előtte ennyi volt: ${szoveg} )
     $("ul").append(` <li   class="sor"  id="sor${hanyadiksor}"   data-szamozo="${hanyadiksor}">
-                        ${szoveg}
+                        <div class="szoveg">${szoveg}</div>
                         <button class="ikon" id="ikon${hanyadiksor}" data-szamozo="${hanyadiksor}" >  <i class="fas fa-space-shuttle"></i>   </button>
                         <button class="torl" id="torl${hanyadiksor}"  data-szamozo="${hanyadiksor}" >   Törlés      </button>
 

@@ -1,3 +1,19 @@
+#fentfix {
+    position: fixed;
+    top: 300px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+
+}
+
+
+
+
+
+
+
 /* D, 2021.10.09-én ez a 12 sor. Célja: 9-nél több karakter is beleírható az input mezőbe. */
 .szoveg {
     display: inline-block;
@@ -81,6 +97,7 @@ section {
     margin-left: auto;
     margin-right: auto;
 }
+
 
 h1 {
     text-align: center;

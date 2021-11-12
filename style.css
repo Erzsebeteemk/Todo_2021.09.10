@@ -1,12 +1,20 @@
 #fentfix {
-    position: fixed;
-    top: 300px;
+    position: sticky;
+    top: 0;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: inline-block;
-
 }
+
+#haromgomb {
+    background-color: #fcc11e;
+}
+
+#csik {
+    background-color: #fcc11e;
+}
+
 
 
 

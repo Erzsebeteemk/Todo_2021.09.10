@@ -173,15 +173,15 @@ $("ul").on("click","li",(event) => {
                                 if (katt === 1) {
                                     $(event.target).css("background-color", "rgb(54, 105, 173)")    }
                                 else if (katt === 2) {
-                                    $(event.target).css("background-color", "rgb(255, 204, 0)")     }
+                                    $(event.target).css("background-color", "#fcc11e")     }
                                 else if (katt === 3) {
                                     $(event.target).css("background-color", "rgb(255, 119, 0)")     }
                                 else if (katt === 4) {
-                                    $(event.target).css("background-color", "rgb(212, 230, 135)")   }
+                                    $(event.target).css("background-color", "#a5dc1f")   }
                                 else if (katt === 5) {
-                                $(event.target).css("background-color", "rgb(110, 255, 255)")        }
+                                $(event.target).css("background-color", "rgb(155, 255, 255)")        }
                                 else if (katt === 6) {
-                                    $(event.target).css("background-color", "#8a8b7f")      }
+                                    $(event.target).css("background-color", "#8c9093")      }
 
                                 else if (katt === 7) {
                                 $(event.target).css("background-color", "rgb(255, 255, 255)")   
@@ -220,21 +220,21 @@ $("ul").on("click",".ikon",(event) => {
             else if (kattikon === 3) {
                 $("#sor"+mitszinezikon).css("color", "green")  }       
             else if (kattikon === 4) {
-                $("#sor"+mitszinezikon).css("color", "white")  }       
+                $("#sor"+mitszinezikon).css("color", "white")   }       
             else if (kattikon === 5) {
-                $("#sor"+mitszinezikon).css("color", "black")  }       
+                $("#sor"+mitszinezikon).css("color", "black")   }       
             else if (kattikon === 6) {
                 $("#sor"+mitszinezikon).css("color", "yellow")  }       
             else if (kattikon === 7) {
                 $("#sor"+mitszinezikon).css("color", "pink")         
-    kattikon = 0                                                                    }
+    kattikon = 0                                                }
 }
 )
 
 
 
 // T: Színminta az inputmező felett, listasorok színe.
-let szinek = ["rgb(54, 105, 173)", "rgb(255, 204, 0)", "rgb(255, 119, 0)", "rgb(212, 230, 135)", "rgb(110, 255, 255)", "#8a8b7f", "rgb(255, 255, 255)"] 
+let szinek = ["rgb(54, 105, 173)", "#fcc11e", "rgb(255, 119, 0)", "#a5dc1f", "rgb(185, 255, 255)", "#8c9093", "rgb(255, 255, 255)"] 
 
 szinek.forEach(function (szin) {
     $(".kontener").append("<div class='szinbox'> </div>")

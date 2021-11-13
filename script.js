@@ -179,9 +179,10 @@ $("ul").on("click","li",(event) => {
                                 else if (katt === 4) {
                                     $(event.target).css("background-color", "rgb(212, 230, 135)")   }
                                 else if (katt === 5) {
-                                $(event.target).css("background-color", "#c5dae4")               }
+                                $(event.target).css("background-color", "rgb(110, 255, 255)")        }
                                 else if (katt === 6) {
-                                    $(event.target).css("background-color", "#fbebfe")              }
+                                    $(event.target).css("background-color", "#8a8b7f")      }
+
                                 else if (katt === 7) {
                                 $(event.target).css("background-color", "rgb(255, 255, 255)")   
                         katt = 0                                                                    }
@@ -233,7 +234,7 @@ $("ul").on("click",".ikon",(event) => {
 
 
 // T: Színminta az inputmező felett, listasorok színe.
-let szinek = ["rgb(54, 105, 173)", "rgb(255, 204, 0)", "rgb(255, 119, 0)", "rgb(212, 230, 135)", "#c5dae4", "#fbebfe", "rgb(255, 255, 255)"] 
+let szinek = ["rgb(54, 105, 173)", "rgb(255, 204, 0)", "rgb(255, 119, 0)", "rgb(212, 230, 135)", "rgb(110, 255, 255)", "#8a8b7f", "rgb(255, 255, 255)"] 
 
 szinek.forEach(function (szin) {
     $(".kontener").append("<div class='szinbox'> </div>")
